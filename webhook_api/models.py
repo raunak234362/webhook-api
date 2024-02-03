@@ -1,5 +1,4 @@
 from django.db import models
-
 from djongo.models.fields import ListField
 
 class Webhook(models.Model):
