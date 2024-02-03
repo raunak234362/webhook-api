@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from .models import Webhook
-
 from djongo.models.fields import ListField
 
 class WebhookSerializer(serializers.ModelSerializer):
@@ -12,4 +11,4 @@ class WebhookSerializer(serializers.ModelSerializer):
             'updated_at': {'read_only': True},
         }
 
-    events = ListField(child=serializers.CharField(max_length=200))
+    events = ListField(serializers.CharField(max_length=200))
